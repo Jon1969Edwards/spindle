@@ -4,36 +4,152 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spindle — sort your vinyl shelves</title>
-  <meta name="description" content="Spindle sorts a Discogs vinyl collection for real shelves and exports a printable list. Windows app. Not affiliated with Discogs.">
+  <meta name="description" content="Spindle sorts a Discogs vinyl collection onto real shelves and exports a printable list. Windows app, with a phone companion. Not affiliated with Discogs.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Spindle
+    </a>
+    <nav class="nav">
+      <a href="#product">Product</a>
+      <a href="#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="nav-cta" href="#download">Get Spindle</a>
+    </nav>
+  </header>
+
   <main>
-    <p class="mark">Spindle</p>
-    <h1>Sort the shelf the way the records actually sit.</h1>
-    <p class="lead">
-      Spindle loads your Discogs collection, orders LPs by artist, title, and year,
-      and exports a list you can take to the shelf. A phone companion uses the same Pro key.
-    </p>
-    <p class="note">Not affiliated with Discogs.</p>
-
-    <section>
-      <h2>Windows</h2>
-      <p>The signed installer is not up yet. This page will link to it when the first release is published.</p>
-      <p><a class="button" href="https://github.com/Jon1969Edwards/spindle/releases/latest">Windows download</a></p>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Windows app for Discogs collections</p>
+        <h1>Catalog the shelf the way the records actually sit.</h1>
+        <p class="lede">
+          Spindle loads your collection, orders LPs by artist, title, and year,
+          and gives you a list you can take to the shelf. The phone companion uses the same Pro key.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#download">Download for Windows</a>
+          <a class="button button-ghost" href="#pricing">See Pro · $24</a>
+        </div>
+        <p class="fine">Not affiliated with Discogs.</p>
+      </div>
+      <div class="hero-stage" aria-hidden="true">
+        <div class="cabinet">
+          <div class="cabinet-top">Living room</div>
+          <div class="bay">
+            <span class="spine s1"></span><span class="spine s2"></span><span class="spine s3"></span>
+            <span class="spine s4"></span><span class="spine s5"></span><span class="spine s6"></span>
+            <span class="spine s7"></span><span class="spine s2"></span><span class="spine s8"></span>
+            <span class="spine s3"></span><span class="spine s1"></span><span class="spine s5"></span>
+          </div>
+          <div class="bay">
+            <span class="spine s6"></span><span class="spine s8"></span><span class="spine s4"></span>
+            <span class="spine s1"></span><span class="spine s7"></span><span class="spine s3"></span>
+            <span class="spine s5"></span><span class="spine s2"></span><span class="spine s6"></span>
+            <span class="spine s8"></span><span class="spine s4"></span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Pro · $24</h2>
-      <p>One-time unlock for unlimited records, marketplace prices, manual shelf order, audio preview, and A/B/C shelf dividers. Free includes sort and export for up to 100 records.</p>
-      <p>Checkout is not open yet. When it is, Buy Pro in the app will come here.</p>
+    <section id="product" class="section">
+      <div class="section-intro">
+        <h2>Built for the shelf, not another spreadsheet.</h2>
+        <p>Sign in with Discogs, or import a CSV. Spindle keeps the order you can actually walk.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <div class="feature-visual shelf-list" aria-hidden="true">
+            <p><b>A</b> Adams, Bryan — Reckless</p>
+            <p><b>B</b> Bowie, David — Low</p>
+            <p><b>C</b> Coltrane, John — A Love Supreme</p>
+            <p class="dim">The and A stripped. Discogs suffixes cleaned up.</p>
+          </div>
+          <div>
+            <h3>Shelf order that matches the crate</h3>
+            <p>Artist, then title, then year. Leading articles come off. “Name and the …” stays with the solo name. Genre sort is there when you want sections instead of letters.</p>
+          </div>
+        </article>
+        <article class="feature feature-flip">
+          <div class="feature-visual export-card" aria-hidden="true">
+            <p class="file">vinyl_shelf_order.txt</p>
+            <p class="file">vinyl_shelf_order.csv</p>
+            <p class="file">vinyl_shelf_order.json</p>
+          </div>
+          <div>
+            <h3>A list you can print or file</h3>
+            <p>Export TXT, CSV, or JSON. Letter dividers are included. A/B/C physical shelf dividers are part of Pro.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature-visual price-card" aria-hidden="true">
+            <p class="price-row"><span>Lowest</span><strong>$18</strong></p>
+            <p class="price-row"><span>Median</span><strong>$24</strong></p>
+            <p class="price-row"><span>Highest</span><strong>$41</strong></p>
+          </div>
+          <div>
+            <h3>Prices, cabinets, and the phone</h3>
+            <p>Pro shows marketplace prices with a local cache, drag-and-drop shelf order, and audio preview. Cabinets and genre edits sync to the phone through your Discogs notes.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Support</h2>
-      <p><a href="mailto:jon1969edwards@gmail.com">jon1969edwards@gmail.com</a></p>
-      <p><a href="privacy.html">Privacy policy</a></p>
+    <section id="pricing" class="section section-tint">
+      <div class="section-intro">
+        <h2>Free to start. Pro when the collection outgrows it.</h2>
+        <p>One-time unlock. The same key works on Windows and the phone.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Free</h3>
+          <p class="plan-price">$0</p>
+          <ul>
+            <li>Sort and export up to 100 records</li>
+            <li>Search, album info, Discogs links</li>
+            <li>CSV or JSON import</li>
+            <li>Letter dividers in the text export</li>
+          </ul>
+        </article>
+        <article class="plan plan-pro">
+          <h3>Pro</h3>
+          <p class="plan-price">$24 <span>once</span></p>
+          <ul>
+            <li>Unlimited collection size</li>
+            <li>Marketplace prices</li>
+            <li>Manual shelf order</li>
+            <li>Audio preview and A/B/C shelf dividers</li>
+          </ul>
+          <p class="plan-note">Checkout is not open yet. Buy Pro in the app will come here when it is.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="section cta-band">
+      <div>
+        <h2>Get the Windows app</h2>
+        <p>The signed installer is not published yet. This button will serve it as soon as the first release is up.</p>
+      </div>
+      <a class="button" href="https://github.com/Jon1969Edwards/spindle/releases/latest">Windows download</a>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Spindle
+      </a>
+      <p>Sort a personal vinyl collection for real shelves.</p>
+    </div>
+    <div>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="mailto:jon1969edwards@gmail.com">jon1969edwards@gmail.com</a>
+    </div>
+    <p class="fine">© 2026 Jonathan C Edwards. Not affiliated with Discogs.</p>
+  </footer>
 </body>
 </html>
