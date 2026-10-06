@@ -1,13 +1,15 @@
 :root {
-  color-scheme: light;
-  --bg: #f6f3ee;
-  --paper: #fffcf8;
-  --ink: #1c1915;
-  --muted: #5e584f;
-  --line: #e3dbd0;
-  --gold: #8d6816;
-  --gold-soft: #f3e6c4;
-  --shadow: 0 18px 50px rgba(40, 28, 12, 0.08);
+  color-scheme: dark;
+  --bg: #0a0e1a;
+  --paper: #121826;
+  --panel: #1e293b;
+  --ink: #f1f5f9;
+  --muted: #94a3b8;
+  --line: #334155;
+  --gold: #c9943a;
+  --accent: #6c63ff;
+  --accent-hover: #5a52d5;
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   --sans: "Segoe UI", system-ui, sans-serif;
   --serif: Georgia, "Iowan Old Style", Palatino, serif;
 }
@@ -15,6 +17,12 @@
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+
+#product,
+#pricing,
+#download {
+  scroll-margin-top: 5.25rem;
+}
 
 body {
   margin: 0;
@@ -24,6 +32,12 @@ body {
 }
 
 a { color: inherit; }
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 
 img { max-width: 100%; }
 
@@ -59,13 +73,10 @@ img { max-width: 100%; }
 }
 
 .brand-mark {
-  width: 1.35rem;
-  height: 1.35rem;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, var(--bg) 0 18%, var(--ink) 19% 28%, transparent 29%),
-    repeating-radial-gradient(circle at 50% 50%, var(--ink) 0 1px, transparent 2px 5px);
-  box-shadow: inset 0 0 0 2px var(--ink);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 6px;
+  display: block;
 }
 
 .nav {
@@ -85,27 +96,28 @@ img { max-width: 100%; }
   justify-content: center;
   padding: 0.7rem 1.05rem;
   border-radius: 999px;
-  background: var(--ink);
-  color: var(--paper) !important;
+  background: var(--accent);
+  color: #fff !important;
   text-decoration: none;
   font-weight: 650;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--accent);
 }
 
 .button-ghost {
   background: transparent;
   color: var(--ink) !important;
+  border-color: var(--line);
 }
 
-.button:hover { background: #000; }
-.button-ghost:hover { background: var(--paper); }
+.button:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.button-ghost:hover { background: var(--panel); }
 
 .hero {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2.5rem;
   align-items: center;
-  padding: 3.2rem 0 4.5rem;
+  padding: 2.4rem 0 4rem;
 }
 
 .eyebrow {
@@ -121,7 +133,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02e
 
 h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 5vw, 4.1rem);
+  font-size: clamp(2.4rem, 4.6vw, 3.7rem);
   line-height: 1.05;
 }
 
@@ -145,49 +157,15 @@ h1 {
   font-size: 0.88rem;
 }
 
-.hero-stage { display: flex; justify-content: center; }
-
-.cabinet {
-  width: min(100%, 360px);
-  padding: 0.9rem;
-  border-radius: 18px;
-  background: #2a241c;
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0a0e1a;
   box-shadow: var(--shadow);
 }
-
-.cabinet-top {
-  margin-bottom: 0.7rem;
-  color: #f3d48a;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.bay {
-  display: flex;
-  align-items: end;
-  gap: 3px;
-  height: 132px;
-  margin-top: 0.55rem;
-  padding: 0.45rem;
-  border-radius: 8px;
-  background: #14110e;
-}
-
-.spine {
-  flex: 1;
-  height: 100%;
-  border-radius: 2px;
-}
-
-.s1 { background: #8d3b2f; }
-.s2 { background: #d7c4a3; }
-.s3 { background: #1f4b3a; }
-.s4 { background: #c9a24e; }
-.s5 { background: #24324a; }
-.s6 { background: #efe7da; }
-.s7 { background: #6b3f55; }
-.s8 { background: #3d3428; }
 
 .section { padding: 1rem 0 4.5rem; }
 
@@ -195,7 +173,7 @@ h1 {
   width: 100%;
   max-width: none;
   padding: 4rem 0;
-  background: #efeae2;
+  background: #0f1419;
 }
 
 .section-tint .section-intro,
@@ -218,8 +196,8 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 
 .feature {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
   align-items: center;
   padding: 1.25rem;
   border: 1px solid var(--line);
@@ -227,45 +205,32 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
   background: var(--paper);
 }
 
-.feature-flip { grid-template-columns: 1.1fr 0.9fr; }
+.feature-flip { grid-template-columns: 0.85fr 1.15fr; }
 .feature-flip .feature-visual { order: 2; }
 
 .feature-visual {
   min-height: 150px;
   padding: 1rem 1.1rem;
   border-radius: 12px;
-  background: #f3eee6;
+  background: #0f1419;
+  border: 1px solid var(--line);
 }
 
-.shelf-list p,
-.export-card p,
-.price-row {
+.feature .shot {
+  box-shadow: none;
+}
+
+.export-card p {
   margin: 0.35rem 0;
   color: var(--ink);
-  font-size: 0.95rem;
 }
-
-.shelf-list b {
-  display: inline-block;
-  width: 1.2rem;
-  color: var(--gold);
-}
-
-.dim { color: var(--muted) !important; font-size: 0.85rem !important; }
 
 .file {
-  padding: 0.45rem 0.6rem;
+  padding: 0.55rem 0.7rem;
   border-radius: 8px;
-  background: white;
+  background: var(--panel);
   font-family: Consolas, "Courier New", monospace;
   font-size: 0.86rem !important;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid var(--line);
 }
 
 .plans {
@@ -282,24 +247,25 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 }
 
 .plan-pro {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
+  background: #16122e;
+  color: var(--ink);
+  border-color: var(--accent);
 }
 
 .plan-pro li,
-.plan-pro .plan-note { color: #d9d0c4; }
+.plan-pro .plan-note { color: var(--muted); }
 
 .plan-price {
   margin: 0.2rem 0 0.8rem;
   font-family: var(--serif);
   font-size: 2.4rem;
+  color: var(--ink);
 }
 
 .plan-price span {
   font-family: var(--sans);
   font-size: 1rem;
-  color: #d9d0c4;
+  color: var(--muted);
 }
 
 .plan ul { margin: 0; padding-left: 1.1rem; }
@@ -314,7 +280,8 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
   margin-bottom: 3rem;
   padding: 1.6rem 1.5rem;
   border-radius: 18px;
-  background: var(--gold-soft);
+  border: 1px solid var(--line);
+  background: var(--paper);
 }
 
 .cta-band h2 { margin-bottom: 0.35rem; }
@@ -365,5 +332,5 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 
   .site-header { align-items: flex-start; }
   .nav { flex-wrap: wrap; justify-content: flex-end; }
-  .hero { padding-top: 1.6rem; }
+  .hero { padding-top: 1.4rem; }
 }
