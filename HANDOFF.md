@@ -12,15 +12,15 @@ A one-page product site plus a privacy page.
 
 | File | Role |
 |------|------|
-| `index.html` | Header, hero, three feature blocks, Free vs Pro, download band, footer |
+| `index.html` | Header, hero, three Windows feature blocks, Android phone section, Free vs Pro, download band, footer |
 | `privacy.html` | Public privacy policy. Same header and footer. |
 | `styles.css` | Layout and color |
 | `version.json` | Update manifest the Windows app fetches |
 | `.nojekyll` | Pages serves files as-is |
 
-Copy on the page: Discogs collection sorted for real shelves, TXT/CSV/JSON export, phone companion on the same Pro key, Free up to 100 records, Pro **$24** once. Discogs disclaimer is in the hero and the footer. Support is `jon1969edwards@gmail.com`.
+Copy on the page: Discogs collection sorted for real shelves, TXT/CSV/JSON export, Android companion with shelf / scan / wishlist on the same Pro key, Free up to 100 records, Pro **$24** once. Discogs disclaimer is in the hero and the footer. Support is `jon1969edwards@gmail.com`.
 
-Checkout is not open. The Pro card says so. The Windows download links to https://github.com/Jon1969Edwards/spindle/releases/latest and the page says the signed installer is not published yet.
+Checkout is not open. The Pro card says so. The Windows download links to https://github.com/Jon1969Edwards/spindle/releases/latest and the page says the signed installer is not published yet. There is no Play Store button yet.
 
 ## Who depends on this site
 
@@ -33,10 +33,10 @@ When a signed `Spindle-Setup-1.0.0.exe` exists, upload it as a Release on **this
 
 ## Current look
 
-Dark navy page matching the Windows app (`#0a0e1a`, purple `#6c63ff`, gold labels `#c9943a`). The header uses `assets/logo-mark.png` (navy field, red record grooves). The hero is the cabinet screenshot. The feature blocks use the collection list, the export filenames, and the album detail with real marketplace prices. Those shots are the running Windows app with a real collection.
+Dark navy page matching the Windows app (`#0a0e1a`, purple `#6c63ff`, gold labels `#c9943a`). The header uses `assets/logo-mark.png` (navy field, red record grooves). The hero is the Windows cabinet screenshot. The feature blocks use the collection list, the export filenames, and the album detail with real marketplace prices.
+
+The `#phone` section sits between the Windows features and pricing. It shows three tall phone frames (`assets/phone-shelf.png`, `assets/phone-scan.png`, `assets/phone-wishlist.png`) on the phone ground `#1a1a2e` with gold captions. No store download link — the phone stays a companion.
 
 ## Next change
 
-Phone screenshots when a device is connected. Phone ground is `#1a1a2e` and the phone accent is gold `#c9943a`.
-
-No custom domain yet. A domain can point at this Pages site later.
+Play Store listing link when the Android build ships. Custom domain can point at this Pages site later.

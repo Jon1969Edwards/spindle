@@ -19,6 +19,7 @@
 html { scroll-behavior: smooth; }
 
 #product,
+#phone,
 #pricing,
 #download {
   scroll-margin-top: 5.25rem;
@@ -225,6 +226,49 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
   color: var(--ink);
 }
 
+.section-phone {
+  padding-top: 2rem;
+}
+
+.section-phone .section-intro {
+  max-width: 42rem;
+}
+
+.phone-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.phone-frame {
+  margin: 0;
+  padding: 0.7rem 0.7rem 0.85rem;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  background: #1a1a2e;
+  box-shadow: var(--shadow);
+}
+
+.phone-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(201, 148, 58, 0.28);
+  background: #1a1a2e;
+}
+
+.phone-frame figcaption {
+  margin: 0.7rem 0 0;
+  text-align: center;
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .file {
   padding: 0.55rem 0.7rem;
   border-radius: 8px;
@@ -321,11 +365,17 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
   .hero,
   .feature,
   .feature-flip,
+  .phone-row,
   .plans,
   .cta-band,
   .site-footer {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .phone-frame {
+    max-width: 22rem;
+    margin-inline: auto;
   }
 
   .feature-flip .feature-visual { order: 0; }
