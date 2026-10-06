@@ -38,7 +38,16 @@
         </div>
         <p class="fine">Not affiliated with Discogs.</p>
       </div>
-      <img class="shot" src="assets/shelf.png" alt="Spindle cabinet view with record spines on eight shelves">
+      <div class="hero-pair">
+        <a class="zoom" href="assets/shelf.png" data-zoom aria-label="View larger: Spindle cabinet view with record spines on eight shelves">
+          <img class="shot" src="assets/shelf.png" alt="Spindle cabinet view with record spines on eight shelves">
+        </a>
+        <a class="zoom hero-phone" href="assets/phone-shelf.png" data-zoom aria-label="View larger: Spindle phone shelf view">
+          <span class="phone-frame">
+            <img src="assets/phone-shelf.png" alt="Spindle phone shelf view with album covers on a numbered shelf">
+          </span>
+        </a>
+      </div>
     </section>
 
     <section id="product" class="section">
@@ -48,7 +57,9 @@
       </div>
       <div class="features">
         <article class="feature">
-          <img class="shot" src="assets/collection-list.png" alt="Spindle collection list sorted by artist">
+          <a class="zoom" href="assets/collection-list.png" data-zoom aria-label="View larger: Spindle collection list sorted by artist">
+            <img class="shot" src="assets/collection-list.png" alt="Spindle collection list sorted by artist">
+          </a>
           <div>
             <h3>Shelf order that matches the crate</h3>
             <p>Artist, then title, then year. Leading articles come off. “Name and the …” stays with the solo name. Genre sort is there when you want sections instead of letters.</p>
@@ -66,7 +77,9 @@
           </div>
         </article>
         <article class="feature">
-          <img class="shot" src="assets/album-detail.png" alt="Album detail for Victor Borge, Comedy In Music, with a marketplace low of 11 SEK">
+          <a class="zoom" href="assets/album-detail.png" data-zoom aria-label="View larger: Album detail for The Clash, London Calling, with a marketplace low of 49 USD">
+            <img class="shot" src="assets/album-detail.png" alt="Album detail for The Clash, London Calling, with a marketplace low of 49 USD">
+          </a>
           <div>
             <h3>Prices, cabinets, and the phone</h3>
             <p>Pro shows marketplace prices with a local cache, drag-and-drop shelf order, and audio preview. Cabinets and genre edits sync to the phone through your Discogs notes.</p>
@@ -87,15 +100,21 @@
       </div>
       <div class="phone-row">
         <figure class="phone-frame">
-          <img src="assets/phone-shelf.png" alt="Spindle phone shelf view with album covers on Shelf 1">
+          <a class="zoom" href="assets/phone-shelf.png" data-zoom aria-label="View larger: Spindle phone shelf view with album covers on a numbered shelf">
+            <img src="assets/phone-shelf.png" alt="Spindle phone shelf view with album covers on a numbered shelf">
+          </a>
           <figcaption>Shelf</figcaption>
         </figure>
         <figure class="phone-frame">
-          <img src="assets/phone-scan.png" alt="Spindle phone barcode scanner pointed at a release">
+          <a class="zoom" href="assets/phone-scan.png" data-zoom aria-label="View larger: Spindle phone barcode scanner pointed at a release">
+            <img src="assets/phone-scan.png" alt="Spindle phone barcode scanner pointed at a release">
+          </a>
           <figcaption>Scan</figcaption>
         </figure>
         <figure class="phone-frame">
-          <img src="assets/phone-wishlist.png" alt="Spindle phone wishlist with Discogs wantlist albums">
+          <a class="zoom" href="assets/phone-wishlist.png" data-zoom aria-label="View larger: Spindle phone wishlist with Discogs wantlist albums">
+            <img src="assets/phone-wishlist.png" alt="Spindle phone wishlist with Discogs wantlist albums">
+          </a>
           <figcaption>Wishlist</figcaption>
         </figure>
       </div>
@@ -154,5 +173,34 @@
     </div>
     <p class="fine">© 2026 Jonathan C Edwards. Not affiliated with Discogs.</p>
   </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Enlarged screenshot">
+    <button type="button" class="lightbox-close" aria-label="Close">Close</button>
+    <img alt="">
+  </dialog>
+  <script>
+    (function () {
+      var box = document.getElementById("lightbox");
+      var img = box.querySelector("img");
+      var closeBtn = box.querySelector(".lightbox-close");
+      document.querySelectorAll("[data-zoom]").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          var thumb = link.querySelector("img");
+          img.src = link.getAttribute("href");
+          img.alt = thumb ? thumb.getAttribute("alt") || "" : "";
+          box.showModal();
+        });
+      });
+      closeBtn.addEventListener("click", function () { box.close(); });
+      box.addEventListener("click", function (event) {
+        if (event.target === box) box.close();
+      });
+      box.addEventListener("close", function () {
+        img.removeAttribute("src");
+        img.alt = "";
+      });
+    })();
+  </script>
 </body>
 </html>
