@@ -20,7 +20,7 @@ A one-page product site plus a privacy page.
 
 Copy on the page: Discogs collection sorted for real shelves, TXT/CSV/JSON export, Android companion with shelf / scan / wishlist on the same Pro key, Free up to 100 records, Pro **$24** once. Discogs disclaimer is in the hero and the footer. Support is `jon1969edwards@gmail.com`.
 
-Checkout is not open. The Pro card says so. The Windows download links to https://github.com/Jon1969Edwards/spindle/releases/latest and the page says the signed installer is not published yet. There is no Play Store button yet.
+Checkout is not open. The Pro card says so. Windows and Android download both link to https://github.com/Jon1969Edwards/spindle/releases/latest. The page says those builds are not published yet. There is no Play Store listing yet.
 
 ## Who depends on this site
 
@@ -33,9 +33,9 @@ When a signed `Spindle-Setup-1.0.0.exe` exists, upload it as a Release on **this
 
 ## Current look
 
-Dark navy page matching the Windows app (`#0a0e1a`, purple `#6c63ff`, gold labels `#c9943a`). The header uses `assets/logo-mark.png` (navy field, red record grooves). The hero is the Windows cabinet screenshot. The feature blocks use the collection list, the export filenames, and the album detail with real marketplace prices.
+Dark navy page matching the Windows app (`#0a0e1a`, purple `#6c63ff`, gold labels `#c9943a`). The header uses `assets/logo-mark.png` (navy field, red record grooves). The hero is the Windows cabinet screenshot beside the phone Kallax cabinet (`assets/phone-cabinet.png`). Screenshots open a larger view on click. The feature blocks use the collection list, the export filenames, and the album detail with real marketplace prices.
 
-The `#phone` section sits between the Windows features and pricing. It shows three tall phone frames (`assets/phone-shelf.png`, `assets/phone-scan.png`, `assets/phone-wishlist.png`) on the phone ground `#1a1a2e` with gold captions. No store download link — the phone stays a companion.
+The `#phone` section sits between the Windows features and pricing. It shows three tall phone frames (`assets/phone-cabinet.png`, `assets/phone-scan.png`, `assets/phone-wishlist.png`) on the phone ground `#1a1a2e` with gold captions. Android download is in the hero and the download band, same public Releases URL as Windows.
 
 ## Next change
 

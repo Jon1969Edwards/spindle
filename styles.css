@@ -412,6 +412,13 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 .cta-band h2 { margin-bottom: 0.35rem; }
 .cta-band p { margin: 0; max-width: 38rem; }
 
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
