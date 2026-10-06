@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — Spindle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <p class="mark"><a href="index.html">Spindle</a></p>
+    <h1>Privacy policy</h1>
+    <p class="note">Last updated 6 October 2026</p>
+    <p>
+      Spindle is a desktop application that helps you organize your personal Discogs vinyl collection.
+      It is not affiliated with, endorsed by, or sponsored by Discogs.
+    </p>
+    <p>Operator: Jonathan C Edwards · <a href="mailto:jon1969edwards@gmail.com">jon1969edwards@gmail.com</a></p>
+
+    <h2>What we collect</h2>
+    <p>
+      We do not operate servers that receive your collection data. By default, everything stays on your
+      computer under <span class="note">%LOCALAPPDATA%\Spindle\</span> on Windows:
+    </p>
+    <ul>
+      <li>Discogs OAuth tokens, in config.json, to sign in and load your collection.</li>
+      <li>Collection and price cache, for faster reloads.</li>
+      <li>Manual shelf order, genre edits, and shelf layout. Genre edits and shelf layout are also written to your Discogs collection notes so the desktop and phone apps stay in sync.</li>
+      <li>Wishlist, album artwork thumbnails, your Pro license key, and settings.</li>
+      <li>A local crash log and diagnostics zip, for troubleshooting on your machine.</li>
+    </ul>
+    <p>
+      Tokens are obfuscated on disk. That is not full encryption. Protect your Windows account the same way you would for any app that stores API credentials.
+    </p>
+
+    <h2>What leaves your device</h2>
+    <ul>
+      <li>Discogs API — your collection, wishlist, and marketplace prices, using the account you sign in with.</li>
+      <li>iTunes / Deezer — artist and album search to find 30-second audio preview URLs.</li>
+      <li>Spotify or YouTube — only if you choose to open them in your browser.</li>
+    </ul>
+    <p>
+      Help → Check for updates fetches a small version.json file from this site to compare version numbers. No personal data is sent.
+    </p>
+    <p>Send feedback opens your email client. You choose what to send.</p>
+    <p>
+      Export diagnostics creates a local zip with the app version, OS info, and a redacted config (tokens removed). You choose whether to share it.
+    </p>
+
+    <h2>Telemetry</h2>
+    <p>Version 1 does not embed analytics or automatic crash reporting.</p>
+
+    <h2>Children</h2>
+    <p>The app is not directed at children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>We may update this policy. Continued use after changes constitutes acceptance.</p>
+
+    <h2>Contact</h2>
+    <p>Privacy questions: <a href="mailto:jon1969edwards@gmail.com">jon1969edwards@gmail.com</a></p>
+  </main>
+</body>
+</html>
