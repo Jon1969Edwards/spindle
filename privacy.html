@@ -4,6 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy policy — Spindle</title>
+  <meta name="description" content="Spindle privacy policy. Collection data stays on your devices. Not affiliated with Discogs.">
+  <link rel="canonical" href="https://jon1969edwards.github.io/spindle/privacy.html">
+  <meta name="theme-color" content="#0a0e1a">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jon1969edwards.github.io/spindle/privacy.html">
+  <meta property="og:title" content="Privacy policy — Spindle">
+  <meta property="og:description" content="Spindle privacy policy. Collection data stays on your devices. Not affiliated with Discogs.">
+  <meta property="og:image" content="https://jon1969edwards.github.io/spindle/assets/logo-mark.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Privacy policy — Spindle">
+  <meta name="twitter:description" content="Spindle privacy policy. Collection data stays on your devices. Not affiliated with Discogs.">
   <link rel="icon" href="assets/logo-mark.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,7 +24,10 @@
       <img class="brand-mark" src="assets/logo-mark.png" alt="">
       Spindle
     </a>
-    <nav class="nav">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav">
       <a href="index.html#how">How it works</a>
       <a href="index.html#product">Features</a>
       <a href="index.html#phone">Android</a>
@@ -90,5 +104,25 @@
     </div>
     <p class="fine">© 2026 Jonathan C Edwards. Not affiliated with Discogs.</p>
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.getElementById("site-nav");
+      if (toggle && nav) {
+        function setOpen(open) {
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          document.body.classList.toggle("nav-open", open);
+        }
+        toggle.addEventListener("click", function () {
+          setOpen(toggle.getAttribute("aria-expanded") !== "true");
+        });
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () { setOpen(false); });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

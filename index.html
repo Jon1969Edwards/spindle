@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spindle — shelf order for your vinyl collection</title>
   <meta name="description" content="Discogs knows what you own. Spindle knows where it sits. Organize cabinets and shelves on Windows and Android. Free up to 100 records. Pro $24 once. Not affiliated with Discogs.">
+  <link rel="canonical" href="https://jon1969edwards.github.io/spindle/">
+  <meta name="theme-color" content="#0a0e1a">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jon1969edwards.github.io/spindle/">
+  <meta property="og:title" content="Spindle — shelf order for your vinyl collection">
+  <meta property="og:description" content="Discogs knows what you own. Spindle knows where it sits. Organize cabinets and shelves on Windows and Android. Free up to 100 records. Pro $24 once.">
+  <meta property="og:image" content="https://jon1969edwards.github.io/spindle/assets/shelf.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spindle — shelf order for your vinyl collection">
+  <meta name="twitter:description" content="Discogs knows what you own. Spindle knows where it sits. Organize cabinets and shelves on Windows and Android. Free up to 100 records. Pro $24 once.">
+  <meta name="twitter:image" content="https://jon1969edwards.github.io/spindle/assets/shelf.png">
   <link rel="icon" href="assets/logo-mark.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,7 +25,10 @@
       <img class="brand-mark" src="assets/logo-mark.png" alt="">
       Spindle
     </a>
-    <nav class="nav">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
+    <nav class="nav" id="site-nav">
       <a href="#how">How it works</a>
       <a href="#product">Features</a>
       <a href="#phone">Android</a>
@@ -32,7 +46,7 @@
         <p class="lede">
           Discogs knows what you own. Spindle knows where it goes —
           cabinets, dividers, and manual placement so you can find a record
-          without scrolling a wantlist on your phone.
+          without endlessly scrolling through your collection.
         </p>
         <div class="hero-actions">
           <span class="button button-disabled" aria-disabled="true">Windows — Coming soon</span>
@@ -108,7 +122,7 @@
           </a>
           <div>
             <h3>Prices, cabinets, and the phone</h3>
-            <p>Pro shows marketplace prices with a local cache, drag-and-drop shelf order, and audio preview. Your cabinets, shelf layout, and genre changes stay in sync between Windows and Android.</p>
+            <p>See Discogs marketplace prices, arrange records exactly where you want them, and listen to audio previews without leaving Spindle. Your cabinets, shelf layout, and genre changes stay in sync between Windows and Android.</p>
           </div>
         </article>
       </div>
@@ -186,7 +200,7 @@
       <div class="faq">
         <details>
           <summary>Does Spindle change my Discogs collection?</summary>
-          <p>No. Spindle reads your collection and keeps shelf layout on your devices. It does not rewrite what you own on Discogs.</p>
+          <p>Spindle does not add or remove records from your Discogs collection. However, when syncing shelf layouts and genre changes between devices, Spindle may update collection notes associated with your records.</p>
         </details>
         <details>
           <summary>Do I need a Discogs account?</summary>
@@ -218,7 +232,8 @@
     <section id="download" class="section cta-band">
       <div>
         <h2>Get Spindle</h2>
-        <p>Windows and Android builds are not published yet. Downloads will appear here with the first release — no empty GitHub dump in the meantime.</p>
+        <p>Windows and Android downloads will be available here when Spindle launches.</p>
+        <p class="cta-contact">Questions? <a href="mailto:jon1969edwards@gmail.com">Email jon1969edwards@gmail.com</a></p>
       </div>
       <div class="cta-actions">
         <span class="button button-disabled" aria-disabled="true">Windows — Coming soon</span>
@@ -268,6 +283,22 @@
         img.removeAttribute("src");
         img.alt = "";
       });
+
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.getElementById("site-nav");
+      if (toggle && nav) {
+        function setOpen(open) {
+          toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          document.body.classList.toggle("nav-open", open);
+        }
+        toggle.addEventListener("click", function () {
+          setOpen(toggle.getAttribute("aria-expanded") !== "true");
+        });
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () { setOpen(false); });
+        });
+      }
     })();
   </script>
 </body>
