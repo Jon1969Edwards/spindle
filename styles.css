@@ -21,7 +21,9 @@ html { scroll-behavior: smooth; }
 #product,
 #phone,
 #pricing,
-#download {
+#download,
+#how,
+#faq {
   scroll-margin-top: 5.25rem;
 }
 
@@ -113,6 +115,23 @@ img { max-width: 100%; }
 .button:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
 .button-ghost:hover { background: var(--panel); }
 
+.button-disabled,
+.button[aria-disabled="true"] {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--muted) !important;
+  cursor: not-allowed;
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+}
+
+.button-disabled:hover,
+.button[aria-disabled="true"]:hover {
+  background: var(--panel);
+  border-color: var(--line);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(16rem, 0.92fr) minmax(0, 1.28fr);
@@ -150,6 +169,14 @@ h1 {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1.5rem;
+}
+
+.hero-meta {
+  margin: 0.85rem 0 0;
+  max-width: 38rem;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
 .fine {
@@ -271,7 +298,95 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 .section-intro p,
 .feature p,
 .plan li,
+.steps p,
+.faq p,
 .cta-band p { color: var(--muted); }
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  padding: 1.25rem 1.2rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-bottom: 0.7rem;
+  border-radius: 999px;
+  background: var(--accent-muted, rgba(108, 99, 255, 0.18));
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.steps h3 { margin-bottom: 0.35rem; }
+.steps p { margin: 0; }
+
+.trust-line {
+  margin: 1.5rem 0 0;
+  padding: 0.85rem 1rem;
+  max-width: 40rem;
+  border-left: 3px solid var(--gold);
+  background: color-mix(in srgb, var(--panel) 70%, transparent);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.faq {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 44rem;
+}
+
+.faq details {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  padding: 0.15rem 1rem 0.15rem;
+}
+
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 0.95rem 0;
+  font-weight: 650;
+}
+
+.faq summary::-webkit-details-marker { display: none; }
+
+.faq summary::after {
+  content: "+";
+  float: right;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.faq details[open] summary::after { content: "–"; }
+
+.faq p {
+  margin: 0 0 1rem;
+  padding-right: 1rem;
+}
+
+.faq a { color: var(--gold); }
 
 .features { display: grid; gap: 1rem; }
 
@@ -455,6 +570,7 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
   .feature-flip,
   .phone-row,
   .plans,
+  .steps,
   .cta-band,
   .site-footer {
     grid-template-columns: 1fr;
@@ -479,5 +595,6 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 
   .site-header { align-items: flex-start; }
   .nav { flex-wrap: wrap; justify-content: flex-end; }
+  .nav a:not(.nav-cta) { font-size: 0.88rem; }
   .hero { padding-top: 1.4rem; }
 }

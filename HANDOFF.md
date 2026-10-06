@@ -20,7 +20,7 @@ A one-page product site plus a privacy page.
 
 Copy on the page: Discogs collection sorted for real shelves, TXT/CSV/JSON export, Android companion with shelf / scan / wishlist on the same Pro key, Free up to 100 records, Pro **$24** once. Discogs disclaimer is in the hero and the footer. Support is `jon1969edwards@gmail.com`.
 
-Checkout is not open. The Pro card says so. Windows and Android download both link to https://github.com/Jon1969Edwards/spindle/releases/latest. The page says those builds are not published yet. There is no Play Store listing yet.
+Checkout is not open. The Pro card says so. Windows and Android downloads are “Coming soon” placeholders (not linked to empty GitHub Releases). Flip them back to real release URLs when the first builds ship. There is no Play Store listing yet.
 
 ## Who depends on this site
 
