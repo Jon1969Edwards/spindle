@@ -18,7 +18,7 @@ A one-page product site plus a privacy page.
 | `version.json` | Update manifest the Windows app fetches |
 | `.nojekyll` | Pages serves files as-is |
 
-Copy on the page: Discogs collection sorted for real shelves, TXT/CSV/JSON export, Android companion with shelf / scan / wishlist on the same Pro key, Free up to 100 records; a one-time Pro upgrade for Windows and Android together at **$24 is proposed**, and checkout stays closed. Discogs disclaimer is in the hero and the footer. Support is `jon1969edwards@gmail.com`. Ko-fi is `https://ko-fi.com/jonathan1969edwards`, in the download band and the footer.
+Copy on the page: Discogs collection sorted for real shelves, TXT/CSV/JSON export, Android companion with shelf / scan / wishlist on the same Pro key, Free up to 100 records; a one-time Pro upgrade for Windows and Android together at **$24 is proposed**, and checkout stays closed. Discogs disclaimer is in the hero and the footer. Support is `jon1969edwards@gmail.com`. Ko-fi is `https://ko-fi.com/jonathan1969edwards`, as a floating “Buy me a record” button loaded from Ko-fi, plus a text link in the download band and the footer. A tip does not unlock the app.
 
 Checkout is not open. The Pro card says so. The hero and the download band link to the v1.0.0-beta pre-release: `Spindle-Setup-beta.exe` and `Spindle-beta.apk`. That release is not Latest. The Windows file is unsigned. Android is an APK, not a Play Store listing.
 
