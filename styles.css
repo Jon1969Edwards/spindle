@@ -538,6 +538,20 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
   background: #1a1a2e;
 }
 
+.phone-row .phone-frame img {
+  aspect-ratio: 341 / 697;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.phone-row .phone-frame:nth-child(2) img {
+  object-position: center 18%;
+}
+
+.phone-row .phone-frame:nth-child(3) img {
+  object-position: center 72%;
+}
+
 .phone-frame figcaption {
   margin: 0.7rem 0 0;
   text-align: center;
