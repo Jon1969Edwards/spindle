@@ -746,3 +746,16 @@ h3 { margin: 0 0 0.45rem; font-size: 1.45rem; }
 
   .hero { padding-top: 1.4rem; }
 }
+
+.floatingchat-container-wrap,
+.floatingchat-container-wrap-mobi {
+  left: auto !important;
+  right: 2rem !important;
+  width: 13rem !important;
+}
+
+.floating-chat-kofi-popup-iframe,
+.floating-chat-kofi-popup-iframe-mobi {
+  left: auto !important;
+  right: 1rem !important;
+}
